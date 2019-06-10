@@ -26,9 +26,6 @@ ExternalProject_add(
 ExternalProject_Get_Property(flatbuffers source_dir)
 
 install(
-    FILES 
-        ${source_dir}/CMake/FindFlatBuffers.cmake
-        ${source_dir}/CMake/BuildFlatBuffers.cmake
-        cmake/flatbuffers.cmake
+    FILES cmake/flatbuffers.cmake
     DESTINATION cmake
 )
