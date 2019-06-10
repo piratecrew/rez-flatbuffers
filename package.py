@@ -23,6 +23,5 @@ tools = [
 
 def commands():
     env.PATH.prepend("{root}/bin")
-    env.LD_LIBRARY_PATH.prepend("{root}/lib")
     if building:
         env.CMAKE_MODULE_PATH.prepend("{root}/cmake")

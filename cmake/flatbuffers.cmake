@@ -1,5 +1,5 @@
-set(FLATBUFFERS_FLATC_EXECUTABLE ${REZ_FLATBUFFERS_ROOT}/bin/flatc)
-set(FLATBUFFERS_INCLUDE_DIR ${REZ_FLATBUFFERS_ROOT}/include)
-find_package(FlatBuffers REQUIRED)
-
+set(Flatbuffers_DIR $ENV{REZ_FLATBUFFERS_ROOT}/lib64/cmake/flatbuffers)
+find_package(Flatbuffers REQUIRED)
+get_target_property(FLATBUFFERS_FLATC_EXECUTABLE flatbuffers::flatc IMPORTED_LOCATION_NOCONFIG)
 set(flatbuffers_INCLUDE_DIRS ${FLATBUFFERS_INCLUDE_DIR})
+set(flatbuffers_LIBRARIES flatbuffers::flatbuffers)
